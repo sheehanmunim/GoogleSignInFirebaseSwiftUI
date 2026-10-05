@@ -71,8 +71,10 @@ struct LoginView: View {
         
             if let error = error {
                 loginError = error.localizedDescription
+                return
             }
             
+            loginError = ""
             isLoggedIn = true
         }
     }
